@@ -16,11 +16,8 @@ bot.on('message', async (msg) => {
   const id = msg.chat.id;
 
   if (text === '/start') {
-    await bot.sendSticker(
-      id,
-      'https://tlgrm.ru/_/stickers/6a3/497/6a34971d-6648-37c2-8f2b-8940f65ba906/5.jpg',
-    );
-    return bot.sendMessage(id, `Welcome, ${msg.from.first_name}`);
+    await bot.sendSticker(id, 'https://media.stickerswiki.app/ptkdev/1069259.512.webp');
+    return bot.sendMessage(id, `Welcome, ${msg.from.first_name}\nHow can i help you today?`);
   }
-  return bot.sendMessage(id, `You wrote me this:\n${text.toUpperCase()}`);
+  return bot.sendMessage(id, `I'm a young bot and just learning\nYou wrote me this:\n${text}`);
 });
